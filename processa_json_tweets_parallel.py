@@ -5,8 +5,9 @@ Created on Sat Apr  7 10:54:03 2018
 
 @author: neylson
 sintaxe:
-python processa_json.py nomedoarquivo inicio fim
-Já tem que saber o número total de tweets
+python processa_json_tweets_parallel.py nomedoarquivo inicio fim
+Início e fim ajudam a otimizar o processamento. Não recomendo fazer mais do que 20 mil linhas por vez.
+O script em bash faz chunks de 10 mil linhas.
 """
 
 import json
@@ -19,7 +20,6 @@ from multiprocessing import Pool
 t1 = time.time()
 
 file = open(str(sys.argv[1]), 'r')
-#file = open('prisao_lula_tweets3.txt', 'r')
 start = int(sys.argv[2])
 end = int(sys.argv[3])
 
