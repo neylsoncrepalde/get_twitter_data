@@ -17,4 +17,4 @@ completo
 options(scipen = 999)
 completo
 
-write_csv(completo, "tweets_debate20180809_completo.csv")
+write_csv(completo, "tweets_completo.csv")
